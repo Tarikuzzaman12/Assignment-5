@@ -14,17 +14,6 @@ function addHistoryItem(cause, amount) {
   historySection.appendChild(historyItem);
 }
 
-// function balance(id){
-//     const donateMoney = parseFloat(document.getElementById(id).value)
-//     const mainBalanceText = document.getElementById('main-balance').innerText;
-// const mainBalance = parseFloat(mainBalanceText);
-
-// const newMainBalance = mainBalance - donateMoney;
-// document.getElementById('main-balance').innerText = `${newMainBalance}`;
-// return balance;
-
-// }
-
 document
   .getElementById("btn-donate-noakhali")
   .addEventListener("click", function () {
