@@ -30,21 +30,20 @@ document
   .addEventListener("click", function () {
     const donateMoney = getInputValueById("input-donate-money-noakhali");
     const mainBalanceText = document.getElementById("main-balance").innerText;
+    const mainBalance = parseFloat(mainBalanceText);
 
-    if (
-      donateMoney <= 0 ||
-      donateMoney === NaN ||
-      mainBalanceText < donateMoney
-    ) {
-      alert("Please enter a valid amount");
-      return;
-    } else {
+   
+      if (!donateMoney || isNaN(donateMoney) || donateMoney <= 0 || mainBalance < donateMoney) {
+        alert('Please enter a valid amount');
+        return;
+    } 
+  
+     else {
       const beforeAddingMoney = parseFloat(
         document.getElementById("btn-primary").innerText
       );
       const balanceNoakhali = donateMoney + beforeAddingMoney;
       document.getElementById("btn-primary").innerText = balanceNoakhali;
-      const mainBalance = parseFloat(mainBalanceText);
       const newMainBalance = mainBalance - donateMoney;
       document.getElementById("main-balance").innerText = `${newMainBalance}`;
       document.getElementById("input-donate-money-noakhali").value = "";
@@ -58,21 +57,19 @@ document
   .addEventListener("click", function () {
     const donateMoneyFeni = getInputValueById("input-donate-money-feni");
     const mainBalanceText = document.getElementById("main-balance").innerText;
+    const mainBalance = parseFloat(mainBalanceText);
 
-    if (
-      donateMoneyFeni <= 0 ||
-      donateMoneyFeni === NaN ||
-      mainBalanceText < donateMoneyFeni
-    ) {
-      alert("Please enter a valid amount");
+
+    if (!donateMoneyFeni || isNaN(donateMoneyFeni) || donateMoneyFeni <= 0 || mainBalance < donateMoneyFeni) {
+      alert('Please enter a valid amount');
       return;
-    } else {
+  } 
+    else {
       const beforeAddingMoney = parseFloat(
         document.getElementById("btn-secondary").innerText
       );
       const balanceFeni = donateMoneyFeni + beforeAddingMoney;
       document.getElementById("btn-secondary").innerText = balanceFeni;
-      const mainBalance = parseFloat(mainBalanceText);
       const newMainBalance = mainBalance - donateMoneyFeni;
       document.getElementById("main-balance").innerText = `${newMainBalance}`;
       document.getElementById("input-donate-money-feni").value = "";
@@ -85,21 +82,18 @@ document
   .addEventListener("click", function () {
     const donateMoneyquota = getInputValueById("input-donate-money-quota");
     const mainBalanceText = document.getElementById("main-balance").innerText;
+    const mainBalance = parseFloat(mainBalanceText);
 
-    if (
-      donateMoneyquota <= 0 ||
-      donateMoneyquota === NaN ||
-      mainBalanceText < donateMoneyquota
-    ) {
-      alert("Please enter a valid amount");
+    if (!donateMoneyquota || isNaN(donateMoneyquota) || donateMoneyquota <= 0 || mainBalance < donateMoneyquota) {
+      alert('Please enter a valid amount');
       return;
-    } else {
+  } 
+    else {
       const beforeAddingMoney = parseFloat(
         document.getElementById("btn-thirdly").innerText
       );
       const balancequota = donateMoneyquota + beforeAddingMoney;
       document.getElementById("btn-thirdly").innerText = balancequota;
-      const mainBalance = parseFloat(mainBalanceText);
       const newMainBalance = mainBalance - donateMoneyquota;
       document.getElementById("main-balance").innerText = `${newMainBalance}`;
       document.getElementById("input-donate-money-quota").value = "";
