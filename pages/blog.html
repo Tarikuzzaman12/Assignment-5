@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5-challange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/23ae46fddc.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="max-w-screen-xl mx-auto">
+    <main class="w-[95%] mx-auto">
+        <h3 class="text-4xl font-extrabold mt-5 ">Important QAF </h3>
+
+        <!-- QNA 1 -->
+        <div class="border-2 p-7 mt-5 rounded-xl">
+            <div id="question-div-1" class="flex justify-between items-center">
+                <h1>Whait is DOM?</h1>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <input id="answer-field-1" type="text" class=" hidden mt-3" placeholder="Enter Your Answer...">
+        </div>
+        <!-- QNA 2 -->
+        <div class="border-2 p-7 mt-5 rounded-xl">
+            <div id="question-div-2" class="flex justify-between items-center">
+                <h1>Whait is DOM?</h1>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <input id="answer-field-2" type="text" class=" hidden mt-3" placeholder="Enter Your Answer...">
+        </div>
+        <!-- QNA 3 -->
+        <div class="border-2 p-7 mt-5 rounded-xl">
+            <div id="question-div-3" class="flex justify-between items-center">
+                <h1>Whait is DOM?</h1>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <input id="answer-field-3" type="text" class=" hidden mt-3" placeholder="Enter Your Answer...">
+        </div>
+        <!-- QNA 4 -->
+        <div class="border-2 p-7 mt-5 rounded-xl">
+            <div id="question-div-4" class="flex justify-between items-center">
+                <h1>Whait is DOM?</h1>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <input id="answer-field-4" type="text" class=" hidden mt-3" placeholder="Enter Your Answer...">
+        </div>
+
+    </main>
+
+    <script>
+        //QNA handler
+        function qnaHandler(questionDivID, answerFieldID) {
+            document.getElementById(questionDivID).addEventListener('click', function () {
+                const answerField = document.getElementById(answerFieldID)
+                if (answerField.classList.contains('hidden')) {
+                    answerField.classList.remove('hidden');
+                    answerField.classList.add('block');
+                } else {
+                    answerField.classList.remove('block');
+                    answerField.classList.add('hidden');
+                }
+            })
+        }
+
+        qnaHandler('question-div-1', 'answer-field-1')
+        qnaHandler('question-div-2', 'answer-field-2')
+        qnaHandler('question-div-3', 'answer-field-3')
+        qnaHandler('question-div-4', 'answer-field-4')
+    </script>
+</body>
+
+</html>
