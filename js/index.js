@@ -24,6 +24,7 @@ document
    
       if (!donateMoney || isNaN(donateMoney) || donateMoney <= 0 || mainBalance < donateMoney) {
         alert('Please enter a valid amount');
+        document.getElementById("input-donate-money-noakhali").value = "";
         return;
     } 
   
@@ -51,6 +52,7 @@ document
 
     if (!donateMoneyFeni || isNaN(donateMoneyFeni) || donateMoneyFeni <= 0 || mainBalance < donateMoneyFeni) {
       alert('Please enter a valid amount');
+      document.getElementById("input-donate-money-feni").value = "";
       return;
   } 
     else {
@@ -75,6 +77,7 @@ document
 
     if (!donateMoneyquota || isNaN(donateMoneyquota) || donateMoneyquota <= 0 || mainBalance < donateMoneyquota) {
       alert('Please enter a valid amount');
+      document.getElementById("input-donate-money-quota").value = "";
       return;
   } 
     else {
